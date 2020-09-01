@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for combo in range(00, 100):
-    if combo == 99:
-        print("{}".format(combo))
+for value in range(00, 100):
+    if value == 99:
+        print("{:02}".format(value))
     else:
-        print("{}".format(combo), end=", ")
+        print("{:02}".format(value), end=", ")
