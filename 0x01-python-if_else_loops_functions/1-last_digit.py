@@ -12,4 +12,4 @@ if x > 5:
 if x == 0:
     print(x, "and is zero")
 if x < 6 and x != 0:
-    print(x, "and is less than 6 and not zero")
+    print(x, "and is less than 6 and not 0")
