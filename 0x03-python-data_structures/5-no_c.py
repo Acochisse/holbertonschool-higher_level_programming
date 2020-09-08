@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def no_c(my_string):
     stralt = ""
     for i in my_string:
-        if i != 'c' and i != 'C':
+        if i != 'C' and i != 'c':
             stralt += i
     return stralt
