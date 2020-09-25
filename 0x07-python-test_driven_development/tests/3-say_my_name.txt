@@ -1,0 +1,14 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("Blake", "Stewart")
+My name is: Blake Stewart
+>>> say_my_name("Tom")
+My name is: Tom 
+>>> say_my_name(
+... "", "bond")
+My name is:  bond
+>>> say_my_name()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>> say_my_name("", "")
+My name is:  
