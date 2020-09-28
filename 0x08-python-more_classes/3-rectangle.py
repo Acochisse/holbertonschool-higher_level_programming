@@ -10,13 +10,9 @@ class Rectangle:
     class is defined by atr width and height:
     """
 
-    number_of_instances = 0
-    print_symbol = "#"
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     def perimeter(self):
         if (self.__width == 0 or self.__height == 0):
@@ -59,7 +55,7 @@ class Rectangle:
         _print = ''
         for i in range(self.height):
             for j in range(self.width):
-                _print += str(self.print_symbol)
+                _print += '#'
             _print += '\n'
         _print = _print[:-1]
         return _print
