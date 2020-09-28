@@ -13,7 +13,6 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     def perimeter(self):
         if (self.__width == 0 or self.__height == 0):
