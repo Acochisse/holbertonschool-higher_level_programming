@@ -10,8 +10,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_normal_use(self):
         self.assertEqual(max_integer(list=[1, 2, 3, 4]), 4)
 
-    def test_no_imput(self):
+    def test_no_input(self):
         self.assertFalse(max_integer())
+
+    def test_max_in_the_middle(self):
+        self.assertEqual(max_integer([1, 2, 5, 3, 4]), 5)
 
     def test_empty_list(self):
         self.assertFalse(max_integer([]))
