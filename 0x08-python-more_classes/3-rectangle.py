@@ -50,9 +50,9 @@ class Rectangle:
             self.__height = value
 
     def __str__(self):
+        _print = ""
         if self.height == 0 or self.width == 0:
             return _print
-        _print = ''
         for i in range(self.height):
             for j in range(self.width):
                 _print += '#'
