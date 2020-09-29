@@ -1,0 +1,1 @@
+This directory is related to project 252 0x09-python-everything_is_object
