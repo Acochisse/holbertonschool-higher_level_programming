@@ -1,0 +1,1 @@
+This directory is related to projecct 254 0x0A-python-inheritance
