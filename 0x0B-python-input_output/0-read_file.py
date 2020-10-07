@@ -7,5 +7,5 @@ module that reads and prints a file
 def read_file(filename=""):
     """ opens a defined file """
 
-    with open(filename, encoding="UTF=8") as f:
+    with open(filename, 'r') as f:
         print(f.read())
