@@ -19,8 +19,7 @@ class Student:
         """creates a dict of Student attr"""
         artyom_dict = {}
         if attrs is not None and all(isinstance(x, str) for x in attrs):
-            for i, j in attrs:
-                if i in self.__dict__.items():
+            for i, j in self.__dict__.items():
                     if i in attrs:
                         artyom_dict[i] = j
                 return artyom_dict
