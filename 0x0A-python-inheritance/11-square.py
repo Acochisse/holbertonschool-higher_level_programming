@@ -25,6 +25,7 @@ class Rectangle(BaseGeometry):
     class Rectangle inherits from clas BaseGeo
     """
 
+
     def __init__(self, width, height):
         """frame"""
 
@@ -44,6 +45,7 @@ class Square(Rectangle):
     """
     Class Square inherited from class Rectangle
     """
+
 
     def __init__(self, size):
         self.integer_validator("size", size)
