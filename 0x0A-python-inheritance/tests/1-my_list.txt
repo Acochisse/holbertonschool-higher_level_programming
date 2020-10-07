@@ -1,0 +1,8 @@
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> print(MyList([1, 2, 3, 4])
+[1, 2, 3, 4])
+>>> print(Mylist([-3, -7, 0, 1])
+[-7, -3, 0, 1]
+>>> print(mylist([]))
+[]
