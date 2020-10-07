@@ -22,7 +22,7 @@ class Student:
             for i, j in attrs:
                 if i in self.__dict__.items():
                     if i in attrs:
-                        artyom_dict[i] = v
+                        artyom_dict[i] = j
                 return artyom_dict
         else:
             return self.__dict__
