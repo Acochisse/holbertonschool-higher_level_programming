@@ -8,3 +8,10 @@
 
 Almost a Circle is a project designed to test knowlegdge on objects in python and inheritance
 
+| File | Porpose |
+| ------ | ------ |
+| base.py | Contains object class Base |
+| rectangle.py | Contains object class Rectangle |
+| square.py | Contains object class Square |
+| models/| Directory for classes |
+| tests/ | test files for project |
