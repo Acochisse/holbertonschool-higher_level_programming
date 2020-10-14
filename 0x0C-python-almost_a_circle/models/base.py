@@ -6,12 +6,12 @@ import json
 import csv
 import os
 
+
 class Base:
     """
     Class module for Base model
     """
     __nb_objects = 0
-
 
     def __init__(self, id=None):
         """"initialises class Base and sets instance id"""
@@ -34,7 +34,6 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -71,8 +70,8 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         if type(list_objs) != list and list_objs is not None \
-            or not all(isinstance(x, cls)for x in list_objs):
-            raise TypeError("list_objs must be a list")
+                           or not all(isinstance(x, cls)for x in list_objs):
+        raise TypeError("list_objs must be a list")
         filename = cls.__name__ + ".csv"
         with open(filename, 'w') as f:
             if list_objs is not None:
