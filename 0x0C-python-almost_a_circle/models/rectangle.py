@@ -9,8 +9,8 @@ class Rectangle(Base):
     """
     Definition of class Rectangle inherited from Base
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
-        """class object initialiser"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -74,18 +74,15 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """calculates area"""
         return self.width * self.height
 
     def display(self):
-        """visual representation of rectangle"""
         print("\n" * self.__y, end="")
         for i in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
 
     def __str__(self):
-        """returns string repr of rectangle"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                         self.__x,
                                                         self.__y,
@@ -93,7 +90,6 @@ class Rectangle(Base):
                                                         self.__height))
 
     def update(self, *args, **kwargs):
-        """update object attr"""
         if len(args):
             for i, a in enumerate(args):
                 if i == 0:
@@ -119,8 +115,7 @@ class Rectangle(Base):
                     self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """to dict"""
-        attr_list = ["id", "width", "height", "x", "y"]
+         attr_list = ["id", "width", "height", "x", "y"]
         attr_dict = dict()
         for i in attr_list:
             attr_dict[i] = getattr(self, i)
