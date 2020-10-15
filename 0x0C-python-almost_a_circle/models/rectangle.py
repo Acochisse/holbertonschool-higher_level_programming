@@ -2,7 +2,7 @@
 """
 Class module for rectangle
 """
-from models.base import base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -40,7 +40,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """width setter"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError('width must be an integer')
         if value <= 0:
             raise ValueError('width must be > 0')
@@ -49,7 +49,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """height setter"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError('height must be an integer')
         if value <= 0:
             raise ValueError('height must be > 0')
@@ -58,7 +58,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """x setter"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError('x must be an integer')
         if value < 0:
             raise ValueError('x must be >= 0')
@@ -67,14 +67,14 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """y getter"""
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError('y must be an integer')
         if value < 0:
             raise ValueError('y must be >= 0')
         self.__y = value
 
     def area(self):
-        return self.width * self.height
+        return self.__width * self.__height
 
     def display(self):
         print("\n" * self.__y, end="")
@@ -115,7 +115,7 @@ class Rectangle(Base):
                     self.y = kwargs["y"]
 
     def to_dictionary(self):
-         attr_list = ["id", "width", "height", "x", "y"]
+        attr_list = ["id", "width", "height", "x", "y"]
         attr_dict = dict()
         for i in attr_list:
             attr_dict[i] = getattr(self, i)
