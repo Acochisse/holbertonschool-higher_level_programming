@@ -6,12 +6,11 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """
-    Definition of class Rectangle inherited from Base
-    """
+    """Definition of class Rectangle inherited from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """initalises class Rectangle"""
+
         super().__init__(id)
         self.width = width
         self.height = height
@@ -75,15 +74,18 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """self.area"""
         return self.__width * self.__height
 
     def display(self):
+        """self.display"""
         print("\n" * self.__y, end="")
         for i in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
 
     def __str__(self):
+        """class method string"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                         self.__x,
                                                         self.__y,
@@ -91,6 +93,7 @@ class Rectangle(Base):
                                                         self.__height))
 
     def update(self, *args, **kwargs):
+        """class method update"""
         if len(args):
             for i, a in enumerate(args):
                 if i == 0:
@@ -116,6 +119,7 @@ class Rectangle(Base):
                     self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """class method to dictionary"""
         attr_list = ["id", "width", "height", "x", "y"]
         attr_dict = dict()
         for i in attr_list:
