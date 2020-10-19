@@ -9,6 +9,7 @@ class Square(Rectangle):
     """class atr of obj Square"""
 
     def __init__(self, size, x=0, y=0, id=None):
+        """init class Square"""
         super().__init__(size, size, x, y, id)
         self.size = size
 
@@ -19,14 +20,17 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
+        """setter of size"""
         self.width = value
         self.height = value
 
     def __str__(self):
+        """string function"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                          self.y, self.width)
 
     def update(self, *args, **kwargs):
+        """update function"""
         if len(args):
             for i, a in enumerate(args):
                 if i == 0:
@@ -48,6 +52,7 @@ class Square(Rectangle):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
+        """to dict function"""
         odict = {}
         odict["id"] = self.id
         odict["size"] = self.size
