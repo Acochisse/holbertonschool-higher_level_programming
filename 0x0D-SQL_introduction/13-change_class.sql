@@ -1,0 +1,3 @@
+-- script removes Alex :( bye
+
+DELETE FROM second_table WHERE score <= 5;
