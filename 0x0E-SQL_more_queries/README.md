@@ -1,0 +1,1 @@
+This directory is related to project 274 - 0x0E-SQL_more_queries
