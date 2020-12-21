@@ -1,3 +1,3 @@
 #!/bin/bash
-# Script
-curl -sI "$1" | Content-Length | cut -d " " -f 2
+# a Bash script that takes in a URL,
+curl -sI "$1" | grep Content-Length | cut -d " " -f 2
