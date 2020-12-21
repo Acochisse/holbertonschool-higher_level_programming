@@ -1,3 +1,3 @@
 #!/bin/bash
-#
-curl _sH "X-HolbertonSchool-User-Id: 98" "$1"
+# takes in a URL as an argument,
+curl -sH "X-HolbertonSchool-User-Id: 98" "$1"
