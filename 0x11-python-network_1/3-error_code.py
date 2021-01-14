@@ -2,16 +2,15 @@
 """
 displays body of response from url request
 """
-urllib.error as error
-urllib.request as request
+import urllib.error as error
+import urllib.request as request
 from sys import argv
 
 
 if __name__ == "__main__":
-    url = argv[1]
-    req = request.Request(url)
+    req = request.Request(argv[1])
     try:
-        with request.urlopen(req) as response:
-            print(response.read().decode('utf-8')
-    except: error.HTTPError as err:
-        print("Error code: {}".format(err.code))
+        with request.urlopen(req) as r:
+            print(r.read().decode('utf-8'))
+    except error.HTTPError as e:
+        print("Error code: {}".format(e.code))
