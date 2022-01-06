@@ -1,6 +1,4 @@
 #!/usr/bin/node
-// script displays c is cool arg number of times
-
 const x = process.argv[2];
 if (isNaN(x)) {
   console.log('Missing number of occurrences');
