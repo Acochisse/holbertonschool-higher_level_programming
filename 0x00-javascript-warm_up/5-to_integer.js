@@ -1,0 +1,10 @@
+#!/usr/bin/node
+//script that displays the int val of an arg or
+// displays not a number
+
+const argument = process.argv[2];
+if (isNaN(argument)) {
+  console.log('Not a number');
+} else {
+  console.log('My number:', parseInt(argument));
+}
