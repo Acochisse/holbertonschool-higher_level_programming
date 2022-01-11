@@ -1,21 +1,20 @@
-#!/usr/bin/python3
+#!/usr/bin/node
 
 const request = require('request');
-const url = process.argv[2];
-let theCounter = 0;
-
-request(url, function (errorObj, response, body) {
-  if (errorObj) {
-    console.log(errorObj);
+const films = process.argv[2];
+request(films, (error, response, body) => {
+  if (error) {
+    console.log(error);
   } else {
-    const numOfMovies = JSON.parse(body).results;
-    for (let i = 0; i < numOfMovies.length; i++) {
-      for (let j = 0; j < numOfMovies[i].characters.length; j++) {
-        if (numOfMovies[i].characters[j].search('/18/') > 0) {
-          theCounter++;
+    const filmsList = JSON.parse(body).results;
+    let numberMovies = 0;
+    for (let film = 0; film < filmsList.length; film++) {
+      for (let character = 0; character < filmsList[film].characters.length; character++) {
+        if (filmsList[film].characters[character].includes('/18/')) {
+          numberMovies++;
         }
       }
     }
+    console.log(numberMovies);
   }
-  console.log(theCounter);
 });
