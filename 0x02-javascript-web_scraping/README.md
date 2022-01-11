@@ -1,0 +1,1 @@
+this directory is related to project 1177 - 0x02-javascript-web_scraping
